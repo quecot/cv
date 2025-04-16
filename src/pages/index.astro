@@ -1,11 +1,264 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../components/LinkedinIcon.astro";
+import TwitterIcon from "../components/TwitterIcon.astro";
+import WebsiteIcon from "../components/WebsiteIcon.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
 ---
 
 <Layout>
-	<Welcome />
+    <main>
+        <div
+            class="w-[21cm] h-[29.7cm] flex space-x-[0.5cm] print:border-none border border-gray-300 print:m-0 mx-auto sm:my-4 p-[1.3cm] bg-white shadow-sm print:shadow-none"
+        >
+            <aside class="w-[5.6cm] h-full flex flex-col space-y-[0.2cm]">
+                <div class="h-[12.7cm] w-full overflow-hidden">
+                    <img height="480" src="/images/profile.webp" class="bg-[#ECECEC] h-full w-full object-cover" />
+                </div>
+                <div class="bg-[#F9F9F9] flex-grow w-full"></div>
+                <div class="bg-[#DFDFDF] flex-grow w-full"></div>
+            </aside>
+
+            <div class="flex w-[13.2cm] flex-col space-y-3">
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">Contact information</h2>
+
+                    <article>
+                        <p>Francesc Vila Subias</p>
+                        <p>Born in Barcelona, based in Málaga</p>
+                        <p><a href="mailto:francescvilasubias@gmail.com">francescvilasubias@gmail.com</a></p>
+                        <p><a href="tel:+34688972221">(+34) 688 97 22 21</a></p>
+                    </article>
+
+                    <nav class="flex py-2">
+                        <a
+                            href="https://www.linkedin.com/in/francesc-vila-full-stack-engineer/"
+                            target="_blank"
+                            class="mr-1"
+                        >
+                            <LinkedinIcon />
+                        </a>
+                        <a href="https://x.com/__queco" target="_blank">
+                            <TwitterIcon />
+                        </a>
+                        <a href="https://fvila.dev" target="_blank">
+                            <WebsiteIcon />
+                        </a>
+                    </nav>
+                </section>
+
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">Job experience</h2>
+
+                    <article class="space-y-5">
+                        <section class="space-y-1">
+                            <header>
+                                <p>
+                                    <span class="font-bold">Full-stack Developer</span>
+                                    <span class="text-[#565656]">[February 2025 - Present]</span>
+                                </p>
+                                <p class="font-medium">
+                                    Business Insights S.L. - IAM Project for a Global Top-10 Insurance Company
+                                </p>
+                            </header>
+
+                            <h3 class="text-[#565656]">Achievements</h3>
+                            <ul class="list-disc ml-6">
+                                <li>
+                                    Built <span class="font-medium">B2E IAM applications</span>, integrating
+                                    <span class="font-medium">Active Directory</span> authentication and LDAP.
+                                </li>
+                                <li>
+                                    Developed Java 8 & Java 17 microservices with
+                                    <span class="font-medium">Spring Boot</span> and
+                                    <span class="font-medium">Tomcat JSPs</span>.
+                                </li>
+                                <li>
+                                    Worked with security and DevOps teams to align IAM solutions with business needs.
+                                </li>
+                            </ul>
+
+                            <h3 class="text-[#565656]">Learnings</h3>
+                            <ul class="list-disc ml-6">
+                                <li>Enterprise-scale IAM and security best practices.</li>
+                                <li>Designing scalable, high-performance microservices.</li>
+                            </ul>
+                        </section>
+
+                        <section class="space-y-1">
+                            <header>
+                                <p>
+                                    <span class="font-bold">Full-stack Engineer</span>
+                                    <span class="text-[#565656]">[July 2023 - January 2025]</span>
+                                </p>
+                                <p class="font-medium">Doctodata S.L.</p>
+                            </header>
+
+                            <h3 class="text-[#565656]">Achievements</h3>
+                            <ul class="list-disc ml-6">
+                                <li>
+                                    Led multiple <span class="font-medium">B2B Alfresco</span> software implementation projects.
+                                </li>
+                                <li>
+                                    Full-stack <span class="font-medium">web development</span> with
+                                    <span class="font-medium">Angular, Vue.js and Nuxt</span>.
+                                </li>
+                                <li>
+                                    Integrated <span class="font-medium">AI</span> to multiple projects, including
+                                    <span class="font-medium">ChatGPT's API</span> and RAG with vector embeddings.
+                                </li>
+                                <li>
+                                    Developed <span class="font-medium">Java 17</span>
+                                    CLI and desktop applications and microservices with
+                                    <span class="font-medium">Spring Boot</span>.
+                                </li>
+                                <li>Mentored four interns successfully.</li>
+                                <li>
+                                    Implemented good practices including Git, Semantic Versioning, Java Application
+                                    testing.
+                                </li>
+                            </ul>
+
+                            <h3 class="text-[#565656]">Learnings</h3>
+                            <ul class="list-disc ml-6">
+                                <li>Maintained and updated legacy Java projects.</li>
+                                <li>
+                                    Developed proficiency in databases, user authentication, and web development with
+                                    <span class="font-medium">Nuxt 3, TailwindCSS, Vue</span>, and
+                                    <span class="font-medium">PostgreSQL</span>.
+                                </li>
+                                <li>
+                                    Acquired <span class="font-medium">Docker</span> skills for
+                                    <span class="font-medium">containerizing applications</span> and
+                                    <span class="font-medium">orchestrating deployments</span>.
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                </section>
+            </div>
+        </div>
+
+        <div
+            class="w-[21cm] h-[29.7cm] flex space-x-[0.5cm] print:border-none border border-gray-300 print:m-0 mx-auto my-4 p-[1.3cm] bg-white shadow-sm print:shadow-none"
+        >
+            <aside class="w-[2.1cm] h-full flex flex-col space-y-[0.2cm]">
+                <div class="bg-[#F9F9F9] h-[12.7cm] w-full"></div>
+                <div class="bg-[#DFDFDF] flex-grow w-full"></div>
+                <div class="bg-[#ECECEC] flex-grow w-full"></div>
+            </aside>
+
+            <div class="flex w-[16cm] flex-col space-y-[0.4cm]">
+                <section>
+                    <article class="space-y-5">
+                        <section class="space-y-1">
+                            <header>
+                                <p>
+                                    <span class="font-bold">Full-stack Developer</span>
+                                    <span class="text-[#565656]">[June 2022 - April 2023]</span>
+                                </p>
+                                <p class="font-medium">Media Arts Studio (freelance)</p>
+                            </header>
+
+                            <h3 class="text-[#565656]">Achievements</h3>
+                            <ul class="list-disc ml-6">
+                                <li>
+                                    Overhauled and modernized a full-stack web application for dubbing project
+                                    management, focusing on enhancing <span class="font-medium">UI</span> and
+                                    <span class="font-medium">UX</span>.
+                                </li>
+                                <li>
+                                    Engineered a web app solution to optimize SRT subtitle matching across various media
+                                    projects, improving accuracy and workflow.
+                                </li>
+                            </ul>
+
+                            <h3 class="text-[#565656]">Learnings</h3>
+                            <ul class="list-disc ml-6">
+                                <li>
+                                    Advanced my proficiency in <span class="font-medium">React, Vue, Nuxt 3</span>, and
+                                    Supabase (<span class="font-medium">PostgreSQL</span>), deepening my understanding
+                                    of <span class="font-medium">CSS</span> frameworks like
+                                    <span class="font-medium">Tailwind</span> for modern web development.
+                                </li>
+                                <li>
+                                    Leveraged <span class="font-medium">Docker</span> containers for local development and
+                                    testing.
+                                </li>
+                            </ul>
+                        </section>
+                    </article>
+                </section>
+
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">Formal education</h2>
+
+                    <article class="flex flex-col space-y-2">
+                        <span>
+                            <p>Bachelor's in Computer Engineering at Universitat Oberta de Catalunya</p>
+                            <p class="text-[#565656]">2022 - Present (in progress)</p>
+                        </span>
+
+                        <span>
+                            <p>Bachelor's in Pedagogy at Universitat Autònoma de Barcelona</p>
+                            <p class="italic">Special Award for Academic Excellence</p>
+                            <p class="text-[#565656]">2019 - 2023</p>
+                        </span>
+
+                        <span>
+                            <p>Bachelor's in Industrial Engineering at Universitat Politècnica de Catalunya</p>
+                            <p class="text-[#565656]">2017 - 2019 (not completed)</p>
+                        </span>
+                    </article>
+                </section>
+
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">Languages</h2>
+
+                    <article>
+                        <p>Spanish - Native level (C2)</p>
+                        <p>Catalan - Native level (C2)</p>
+                        <p>English - Professional level (C1)</p>
+                    </article>
+                </section>
+
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">Technologies I’ve used and love</h2>
+
+                    <article>
+                        <p>
+                            TypeScript (3 years of experience), Node.js (3 YOE), Java (2 YOE), Spring Boot, Maven,
+                            Vue.js (3 YOE), Nuxt, tailwindcss, PostgreSQL, SQLite, Supabase, Vite, Git, GitHub, Docker,
+                            HTML, CSS, Figma, VueUse, Vitest and Linux.
+                        </p>
+                    </article>
+                </section>
+
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">Other technologies I’ve worked with</h2>
+
+                    <article>
+                        <p>
+                            Alfresco, Selenium, JUnit, Swing, Angular, MySQL, MongoDB, JavaScript, C, Python, C#,
+                            dotnet, WPF, PyTorch, TensorFlow, React, Next.js, Express.js, Prettier, ESLint, Microsoft
+                            Azure, Google Cloud Platform, AWS, OpenAI, Transformers, bash, CI/CD, Slack...
+                        </p>
+                    </article>
+                </section>
+
+                <section>
+                    <h2 class="font-bold mb-1 text-[17px]">More about me</h2>
+
+                    <article>
+                        <p>
+                            I've been a scout all my life and volunteered as a branch leader at Agrupament Escolta i
+                            Guia Sant Ignasi for three years (2019-2021). Scout values are a core part of my identity
+                            and are present in all my personal and professional endeavors.
+                        </p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </main>
 </Layout>
